@@ -5,7 +5,7 @@ const start = document.querySelector(".start")
 const area = document.querySelector(".area")
 
 //Objects
-let player = {speed:5, score:0}
+let player = {speed:8, score:0}
 let keys = {ArrowUp: false, ArrowDown: false, ArrowRight: false, ArrowLeft: false}
 
 //Event Listners
@@ -16,6 +16,7 @@ document.addEventListener("keyup",off)
 //Functions
 function started(){
     area.innerHTML = " "
+    player.score = 0
     start.classList.add("hide")
     for(let i =0; i < 10; i++){
         let line = document.createElement("div")
@@ -56,15 +57,15 @@ function play(){
                 ele.y = -650
                 ele.x = Math.floor(Math.random()*500)
             }
-            ele.y += 5
+            ele.y += player.speed
             ele.style.left = ele.x + "px"
             ele.style.top = ele.y + "px"
         })
         if(keys.Enter){
             endgame()
         }
+        window.requestAnimationFrame(play)
     }
-    window.requestAnimationFrame(play)
 }
 
 function isCollide(a,b){
@@ -81,7 +82,8 @@ function isCollide(a,b){
 
 function endgame(){
     player.play = false
-    score.innerHTML = `GAME OVER <br> Your Score is ${player.score}`
+    score.innerHTML = `GAME OVER <br> Your Score is  ${player.score}`
+    window.cancelAnimationFrame(play)
     start.classList.remove("hide")
 }
 //Earth Movers
