@@ -1,0 +1,53 @@
+.hide{
+    display: none;
+}
+
+.score{
+    margin: auto;
+    border: 1px solid black;
+    font-size: 1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 598px;
+    text-align: center;
+}
+
+.start{
+    border: 2px solid burlywood;
+    width: 596px;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+    font-size: 2em;
+}
+.area{
+    position: relative;
+    background-color: black;
+    width: 600px;
+    height: 92vh;
+    margin: auto;
+    overflow: hidden;
+}
+.line{
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 50px;
+    margin: auto;
+    left: 292px;
+}
+.car{
+    position: relative;
+    background-image: url("ktm.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 120px;
+    bottom: -420px;
+    left: 257px;
+}
+.enemy{
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background-image: url("sai2.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "gh pages -d files"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/KishoreVB7/tests/tree/main/cart",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
